@@ -32,7 +32,7 @@ const links = [
             href="https://bolt.new"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center space-x-1 px-3 py-1 rounded-full bg-gradient-to-r from-[#FF6B6B] to-[#FFE66D] text-black text-sm font-medium hover:opacity-90 transition-opacity"
+            class="flex items-center space-x-1 px-3 py-1 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white text-sm font-medium hover:opacity-90 transition-opacity"
           >
             <span>Made with Bolt</span>
           </a>

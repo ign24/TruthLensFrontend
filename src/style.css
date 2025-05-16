@@ -6,6 +6,13 @@
   body {
     font-family: 'Inter', sans-serif;
     background: 
+      repeating-linear-gradient(
+        45deg,
+        rgba(15, 23, 42, 0.03) 0px,
+        rgba(15, 23, 42, 0.03) 2px,
+        transparent 2px,
+        transparent 10px
+      ),
       linear-gradient(135deg, rgba(9, 15, 28, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%),
       linear-gradient(45deg, #020617 0%, #1e3a8a 50%, #0c4a6e 100%);
     background-attachment: fixed;
@@ -24,6 +31,13 @@
     width: 100%;
     height: 100%;
     background: 
+      repeating-radial-gradient(
+        circle at 50% 50%,
+        rgba(56, 189, 248, 0.03) 0px,
+        rgba(56, 189, 248, 0.03) 1px,
+        transparent 1px,
+        transparent 8px
+      ),
       radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.1) 0%, transparent 50%),
       radial-gradient(circle at 80% 80%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
       radial-gradient(circle at 50% 50%, rgba(94, 234, 212, 0.05) 0%, transparent 50%);

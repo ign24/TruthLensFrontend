@@ -66,17 +66,17 @@ function loadExample() {
 </script>
 
 <template>
-  <div class="w-full max-w-2xl mx-auto rounded-xl p-6">
+  <div class="w-full max-w-2xl mx-auto rounded-xl p-4 sm:p-6">
     <div class="relative rounded-lg">
       <div class="absolute -inset-[1px] rounded-lg bg-gradient-to-r from-cyan-400 to-blue-400 z-0"></div>
       <textarea
         v-model="inputText"
         placeholder="Paste your article text or URL here..."
-        class="w-full h-40 p-4 rounded-lg glass-input text-white placeholder-blue-200/50 relative z-10 bg-slate-900"
+        class="w-full h-32 sm:h-40 p-4 rounded-lg glass-input text-white placeholder-blue-200/50 relative z-10 bg-slate-900"
       ></textarea>
     </div>
 
-    <div class="mt-4 flex gap-4">
+    <div class="mt-4 flex flex-col sm:flex-row gap-4">
       <button
         @click="handleAnalyze"
         :disabled="!inputText.trim() || isLoading"
@@ -99,21 +99,21 @@ function loadExample() {
       v-if="factualAccuracy !== 0 || bias || emotionalTone || recommendation"
       class="mt-6 p-4 rounded-xl border border-white/10 text-white space-y-3"
     >
-      <div>
-        <span class="font-semibold text-blue-300">Factual Accuracy:</span>
-        {{ factualAccuracy }}%
+      <div class="flex flex-col sm:flex-row sm:items-center gap-2">
+        <span class="font-semibold text-blue-300 min-w-32">Factual Accuracy:</span>
+        <span>{{ factualAccuracy }}%</span>
       </div>
-      <div>
-        <span class="font-semibold text-blue-300">Political Bias:</span>
-        {{ bias }}
+      <div class="flex flex-col sm:flex-row sm:items-center gap-2">
+        <span class="font-semibold text-blue-300 min-w-32">Political Bias:</span>
+        <span>{{ bias }}</span>
       </div>
-      <div>
-        <span class="font-semibold text-blue-300">Emotional Language:</span>
-        {{ emotionalTone }}
+      <div class="flex flex-col sm:flex-row sm:items-center gap-2">
+        <span class="font-semibold text-blue-300 min-w-32">Emotional Language:</span>
+        <span>{{ emotionalTone }}</span>
       </div>
-      <div>
-        <span class="font-semibold text-blue-300">Reader Recommendation:</span>
-        {{ recommendation }}
+      <div class="flex flex-col sm:flex-row sm:items-center gap-2">
+        <span class="font-semibold text-blue-300 min-w-32">Reader Recommendation:</span>
+        <span>{{ recommendation }}</span>
       </div>
     </div>
   </div>

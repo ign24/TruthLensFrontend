@@ -19,15 +19,17 @@ const links = [
           </span>
         </div>
         
-        <div class="flex items-center space-x-6">
-          <a 
-            v-for="link in links" 
-            :key="link.name"
-            :href="link.href"
-            class="text-sm text-blue-200/80 hover:text-white transition-colors duration-200"
-          >
-            {{ link.name }}
-          </a>
+        <div class="flex items-center space-x-3 sm:space-x-6">
+          <div class="hidden sm:flex items-center space-x-6">
+            <a 
+              v-for="link in links" 
+              :key="link.name"
+              :href="link.href"
+              class="text-sm text-blue-200/80 hover:text-white transition-colors duration-200"
+            >
+              {{ link.name }}
+            </a>
+          </div>
           <a
             href="https://bolt.new"
             target="_blank"

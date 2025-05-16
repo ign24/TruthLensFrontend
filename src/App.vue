@@ -18,13 +18,13 @@ async function handleAnalyze(text: string) {
 
   <Header />
 
-  <div class="min-h-screen pt-24 pb-4 px-4 text-white relative mb-3">
+  <div class="min-h-screen pt-24 pb-4 px-4 sm:px-6 lg:px-8 text-white relative mb-3">
     <div>
       <div class="text-center mb-6">
-        <h1 class="font-display text-6xl font-bold mb-6 relative">
+        <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-bold mb-4 sm:mb-6 relative">
           <span class="bg-gradient-to-r from-cyan-300 via-blue-500 to-cyan-300 bg-clip-text text-transparent animate-gradient">TruthLens</span>
         </h1>
-        <p class="text-lg text-blue-200/80 font-display tracking-wide">Analyze news articles for bias and credibility</p>
+        <p class="text-base sm:text-lg text-blue-200/80 font-display tracking-wide">Analyze news articles for bias and credibility</p>
       </div>
       
       <AnalysisForm @analyze="handleAnalyze" />

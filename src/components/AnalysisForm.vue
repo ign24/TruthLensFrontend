@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import { useUrlValidation } from '../composables/useUrlValidation';
+
 
 const inputText = ref('');
 const isLoading = ref(false);
-const { isValidUrl } = useUrlValidation();
+
 
 // Analysis results
 const factualAccuracy = ref(0);

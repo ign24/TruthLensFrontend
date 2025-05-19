@@ -10,23 +10,24 @@ interface AnalysisResult {
 export function useAnalysis() {
   const result = ref<AnalysisResult | null>(null);
 
-  const analyzeContent = async (text: string) => {
-    // Simulate API call
-    return new Promise<AnalysisResult>((resolve) => {
-      setTimeout(() => {
-        resolve({
-          factualAccuracy: Math.floor(Math.random() * 30) + 70, // 70-100
-          bias: ['left', 'right', 'neutral'][Math.floor(Math.random() * 3)] as 'left' | 'right' | 'neutral',
-          emotionalLevel: ['Neutral', 'Slightly emotional', 'Highly emotional', 'Alarmist'][Math.floor(Math.random() * 4)],
-          recommendation: [
-            'Well-argued and balanced perspective',
-            'Consider checking additional sources',
-            'Exercise caution - emotional language detected',
-            'Recommended to verify claims independently'
-          ][Math.floor(Math.random() * 4)]
-        });
-      }, 2000);
+  const analyzeContent = async (text: string): Promise<AnalysisResult> => {
+    const response = await fetch('https://celebrated-delight-production.up.railway.app/api/analyze', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ input_text: text })
     });
+
+    const data = await response.json();
+
+    const formatted: AnalysisResult = {
+      factualAccuracy: data.factual_accuracy,
+      bias: data.bias,
+      emotionalLevel: data.emotional_tone,
+      recommendation: data.recommendation
+    };
+
+    result.value = formatted;
+    return formatted;
   };
 
   return {

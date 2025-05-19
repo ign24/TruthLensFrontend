@@ -27,7 +27,7 @@ async function handleAnalyze() {
   isLoading.value = true;
 
   try {
-    const response = await fetch('http://localhost:8000/api/analyze', {
+    const response = await fetch('https://celebrated-delight-production.up.railway.app/api/analyze', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -80,7 +80,7 @@ function loadExample() {
       <button
         @click="handleAnalyze"
         :disabled="!inputText.trim() || isLoading"
-        class="flex-1 bg-blue-600/80 glass-button text-white px-6 py-3 rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
+        class="flex-1 bg-blue-500/80 glass-button text-white px-6 py-3 rounded-lg disabled:opacity-60 disabled:cursor-not-allowed"
       >
         <span v-if="!isLoading">Analyze</span>
         <span v-else>Analyzing...</span>
@@ -88,7 +88,7 @@ function loadExample() {
 
       <button
         @click="loadExample"
-        class="px-6 py-3 glass-button border border-white/20 rounded-lg hover:bg-white/5"
+        class="px-6 py-3 glass-button border border-white/40 rounded-lg hover:bg-white/5"
       >
         See Example
       </button>

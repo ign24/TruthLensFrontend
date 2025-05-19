@@ -11,7 +11,7 @@ export function useAnalysis() {
   const result = ref<AnalysisResult | null>(null);
 
   const analyzeContent = async (text: string): Promise<AnalysisResult> => {
-    const response = await fetch('https://harmonious-appreciation-production.up.railway.app/api/analyze', {
+    const response = await fetch('https://truthlens-backend-production.up.railway.app/api/analyze', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ input_text: text })

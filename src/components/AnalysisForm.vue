@@ -27,7 +27,7 @@ async function handleAnalyze() {
   isLoading.value = true;
 
   try {
-    const response = await fetch('https://celebrated-delight-production.up.railway.app/api/analyze', {
+    const response = await fetch('https://truthlens-backend-production.up.railway.app/api/analyze', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

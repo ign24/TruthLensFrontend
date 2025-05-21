@@ -82,7 +82,7 @@
 
   header {
     @apply transition-all duration-300;
-    background: linear-gradient(to bottom, rgba(15, 23, 42, 0.8) 0%, rgba(15, 23, 42, 0.7) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.16) 0%, rgba(15, 23, 42, 0.16) 100%);
   } 
 }
 

@@ -6,6 +6,7 @@ interface AnalysisResult {
   emotionalLevel: string;
   recommendation: string;
 }
+console.log('Using backend: https://truthlens-backend-production.up.railway.app');
 
 export function useAnalysis() {
   const result = ref<AnalysisResult | null>(null);

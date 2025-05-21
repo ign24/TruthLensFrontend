@@ -7,7 +7,7 @@ const links = [
 </script>
 
 <template>
-  <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl">
+  <header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-2xl">
     <nav class="mx-auto px-4 sm:px-6 lg:px-8">
       <div class="my-4 px-4 h-8 rounded-full flex items-center justify-between shadow-sm">
         <div class="flex items-center space-x-3">

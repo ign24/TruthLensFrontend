@@ -13,7 +13,6 @@ async function handleAnalyze(text: string) {
 
 <template>
 
-
   <Header />
 
   <div class="min-h-screen pt-24 pb-4 px-4 text-white relative mb-3">

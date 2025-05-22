@@ -1,8 +1,7 @@
 <script setup lang="ts">
 const links = [
-  { name: 'Analyze', href: '#' },
-  { name: 'Docs', href: '#' },
-  { name: 'Help', href: '#' }
+  { name: 'Analyze', href: '/' },
+  { name: 'Docs', href: 'https://truthlens-backend-production.up.railway.app/docs', external: true }
 ];
 </script>
 
@@ -18,12 +17,26 @@ const links = [
           />
         </div>
 
-
         <div class="flex items-center space-x-6">
-          <a v-for="link in links" :key="link.name" :href="link.href"
-            class="text-sm text-blue-200/80 hover:text-white transition-colors duration-200">
-            {{ link.name }}
-          </a>
+          <template v-for="link in links" :key="link.name">
+            <a
+              v-if="link.external"
+              :href="link.href"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-sm text-blue-200/80 hover:text-white transition-colors duration-200"
+            >
+              {{ link.name }}
+            </a>
+            <a
+              v-else
+              :href="link.href"
+              class="text-sm text-blue-200/80 hover:text-white transition-colors duration-200"
+            >
+              {{ link.name }}
+            </a>
+          </template>
+
           <a href="https://bolt.new" target="_blank" rel="noopener noreferrer"
             class="flex items-center space-x-1 px-3 py-1 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 text-white text-sm font-medium hover:opacity-90 transition-opacity">
             <span>Made with Bolt</span>

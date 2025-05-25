@@ -94,7 +94,7 @@ onMounted(() => {
   <!-- Chat Toggle Button -->
   <button
     @click="toggleChat"
-    class="fixed bottom-6 left-6 z-[100] p-4 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 
+    class="fixed bottom-6 left-6 z-50 p-4 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 
            text-white shadow-lg hover:shadow-cyan-400/20 transition-all duration-300 
            hover:scale-105 focus:outline-none focus:ring-2 focus:ring-cyan-400/50"
   >
@@ -107,7 +107,7 @@ onMounted(() => {
   <!-- Chat Window -->
   <div
     v-show="isOpen"
-    class="fixed bottom-24 left-6 z-[99] w-96 max-w-[calc(100vw-3rem)] h-[500px] max-h-[calc(100vh-8rem)]
+    class="fixed bottom-24 left-6 z-50 w-96 max-w-[calc(100vw-3rem)] h-[500px] max-h-[calc(100vh-8rem)]
            rounded-2xl overflow-hidden backdrop-blur-xl border border-white/10
            bg-gradient-to-b from-slate-900/95 to-slate-800/95 shadow-xl"
   >
